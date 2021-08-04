@@ -31,7 +31,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: ls -al
-    - run: cd ./api
+    - run: cd /home/runner/work/Angular_template/Angular_template/api
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
