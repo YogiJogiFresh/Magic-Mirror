@@ -2,7 +2,6 @@ import express, { Request, Response } from 'express';
 import compression from "compression";
 
 const app = express()
-const port = 3000
 
 app.use(compression());
 app.use(express.json());
@@ -17,8 +16,4 @@ app.get('/user', (req: Request, res: Response) => {
     username: "YogiFresh"
   })
 })
-app.listen(port, () => {
-  // console.log(`Example app listening at http://localhost:${port}`)
-})
-
 export default app;

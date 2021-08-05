@@ -2,13 +2,13 @@
   "name": "api-template",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.js",
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "rm -rf dist && npm run build",
-    "start": "nodemon ./src/app.ts",
-    "test": "jest"
+    "start": "nodemon ./src/index.ts",
+    "test": "jest --detectOpenHandles"
   },
   "author": "",
   "license": "ISC",

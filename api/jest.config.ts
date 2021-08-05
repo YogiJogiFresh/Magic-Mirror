@@ -6,6 +6,7 @@ const config: Config.InitialOptions = {
   verbose: true,
   preset: 'ts-jest',
   testEnvironment: 'node',
+  modulePathIgnorePatterns: ['dist'],
   moduleFileExtensions: ['js', 'ts', 'tsx'],
 };
 
