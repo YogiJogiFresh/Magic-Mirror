@@ -1,0 +1,9 @@
+version: '3'
+services:
+  node:
+    restart: always
+    build:
+        context: ./api
+        dockerfile: Dockerfile.dev
+    ports:
+      - 80:3000
