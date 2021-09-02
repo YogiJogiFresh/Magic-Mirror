@@ -27,7 +27,7 @@ class MongoDB {
   }
 
   getInstance() {
-    return mongoose;
+    return mongoose.connection;
   }
 }
 
