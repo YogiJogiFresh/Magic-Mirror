@@ -9,11 +9,4 @@ it("Testing / endpoint", async () => {
   expect(res.text).toBe("Hello World!");
   // ...
 })
-it("Testing /user endpoint", async () => {
-  const res = await request.get('/user')
-  expect(res.status).toBe(200)
-  expect(res.body.id).toBe(1);
-  expect(res.body.username).toBe("YogiFresh");
-  // ...
-})
 
