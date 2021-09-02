@@ -9,6 +9,24 @@
         "outDir": "dist",
         "baseUrl": ".",
         "paths": {
+            "@/*" : [
+                "src/*"
+            ],
+            "@models/*": [
+                "src/models/*"
+            ],
+            "@configs/*" : [
+                "src/configs/*"
+            ],
+            "@middleware/*" : [
+                "src/middleware/*"
+            ],
+            "@routes/*": [
+                "src/routes/*"
+            ],
+            "@countrllers/*" : [
+                "src/controllers/*"
+            ],
             "*": [
                 "node_modules/*"
             ]
