@@ -24,7 +24,7 @@
             "@routes/*": [
                 "src/routes/*"
             ],
-            "@countrllers/*" : [
+            "@controllers/*" : [
                 "src/controllers/*"
             ],
             "*": [

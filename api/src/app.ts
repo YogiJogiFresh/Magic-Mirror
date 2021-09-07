@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import compression from "compression";
-import logger from '@/middleware/logger.middleware';
-import { userRouter } from '@/routes/user.router'
+import logger from '@middleware/logger.middleware';
+import { userRouter } from '@routes/user.router'
 
 const app = express()
 
