@@ -1,0 +1,4 @@
+FROM mongo
+
+COPY init.json /init.json
+CMD mongoimport --host mongodb --db MyDB --collection UserCollection --upsert --type json --file /init.json --jsonArray
