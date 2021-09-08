@@ -1,9 +1,32 @@
 version: '3'
 services:
   node:
+    image: node
+    container_name: api
     restart: always
     build:
         context: ./api
         dockerfile: Dockerfile.dev
+    volumes:
+      - ./api:/app
     ports:
       - 80:3000
+    links:
+      - mongodb
+  mongodb:
+    image : mongo:latest
+    container_name: mongodb
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 27017:27017
+    restart: always
+  mongo-seed:
+      image: seed-data
+      container_name: mongo-seed
+      build:
+        context: ./db
+        dockerfile: Dockerfile.dev
+      links:
+        - mongodb
