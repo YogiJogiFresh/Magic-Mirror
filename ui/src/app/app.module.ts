@@ -4,18 +4,24 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './components/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule, DatePipe } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
     imports: [
-    BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    CommonModule,
+    FlexLayoutModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
